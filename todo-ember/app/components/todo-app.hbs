@@ -1,0 +1,16 @@
+<ul>
+  {{#each this.todoList as |item|}}
+    <li>{{item.todo}}</li>
+    <button type='button' onclick={{fn this.delete item}}>Delete</button>
+  {{/each}}
+</ul>
+<form onsubmit={{this.submit}}>
+  <input
+    type='text'
+    placeholder='Add todo'
+    aria-label='Add todo'
+    value={{this.text.todo}}
+    onchange={{this.onChange}}
+  />
+  <button type='submit'>Add</button>
+</form>
