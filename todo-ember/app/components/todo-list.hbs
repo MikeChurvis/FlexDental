@@ -1,0 +1,6 @@
+<ul>
+  {{#each this.todo.todoList as |item|}}
+    <TodoListItem @todo={{item}} />
+  {{/each}}
+  <button type='button' {{on 'click' this.addTodo}}>Add New</button>
+</ul>
